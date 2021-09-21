@@ -5,9 +5,11 @@ import ThemeContext from "./ThemeContext";
 const ThemeState = (props) => {
 
     const initialState = {
-        background: "whitesmoke",
-        font: "Tinos",
-        text: "black",
+        style: {
+            background: "whitesmoke",
+            font: "Tinos",
+            text: "black",
+        },
         button: {
             color: "#FFFFFF",
             bg: "#000000"
@@ -17,22 +19,16 @@ const ThemeState = (props) => {
     const [state, dispatch] = useReducer(ThemeReducer, initialState);
 
     const lightMode = () => {
-        dispatch({
-            background: "whitesmoke",
-            font: "Tinos",
-            text: "black",
-            button: {
-                color: "#FFFFFF",
-                bg: "#000000"
-            }
-        })
+        dispatch(initialState)
     }
 
     const darkMode = () => {
         dispatch({
-            background: "black",
-            font: "Ubuntu",
-            text: "whitesmoke",
+            style: {
+                background: "black",
+                font: "Ubuntu",
+                text: "whitesmoke",
+            },
             button: {
                 color: "#000000",
                 bg: "#FFFFFF"
@@ -42,9 +38,7 @@ const ThemeState = (props) => {
 
     return (
         <ThemeContext.Provider value={{
-            background: state.background,
-            font: state.font,
-            text: state.text,
+            style: state.style,
             button: state.button,
             darkMode,
             lightMode

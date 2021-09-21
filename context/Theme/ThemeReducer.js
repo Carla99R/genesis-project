@@ -1,11 +1,9 @@
 export default (state, action) => {
-    const {background, font, text, button} = action;
+    const {style, button} = action;
 
     return {
         ...state,
-        background: background,
-        font: font,
-        text: text,
+        style: style,
         button: button
     }
 

@@ -5,9 +5,7 @@ import {makeStyles} from '@material-ui/core/styles';
 const HomePage = () => {
 
     const {
-        background,
-        font,
-        text,
+        style,
         button,
         darkMode,
         lightMode
@@ -15,9 +13,9 @@ const HomePage = () => {
 
     const useStyles = makeStyles((theme) => ({
         style: {
-            background: background,
-            fontFamily: font,
-            color: text,
+            background: style.background,
+            fontFamily: style.font,
+            color: style.text,
         },
         button: {
             color: button.color,
@@ -31,10 +29,10 @@ const HomePage = () => {
     return (
         <div className={classes.style}>
             <p>HOLA</p>
-            <button onClick={(e) => darkMode()}>
+            <button onClick={(e) => darkMode()} className={classes.button}>
                 Dark
             </button>
-            <button onClick={(e) => lightMode()}>
+            <button onClick={(e) => lightMode()} className={classes.button}>
                 Light
             </button>
         </div>
