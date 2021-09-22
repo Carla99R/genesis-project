@@ -6,8 +6,8 @@ const ThemeState = (props) => {
 
     const initialState = {
         style: {
-            background: "whitesmoke",
-            font: "Tinos",
+            background: "white",
+            font: "'Ubuntu', sans-serif",
             text: "black",
         },
         button: {
@@ -26,7 +26,7 @@ const ThemeState = (props) => {
         dispatch({
             style: {
                 background: "black",
-                font: "Ubuntu",
+                font: "'Ubuntu', sans-serif",
                 text: "whitesmoke",
             },
             button: {
