@@ -1,6 +1,7 @@
 import React, {useContext} from 'react';
 import ThemeContext from "../context/Theme/ThemeContext"
 import {makeStyles} from '@material-ui/core/styles';
+import Navbar from '../components/Navbar/Navbar';
 
 const HomePage = () => {
 
@@ -28,7 +29,7 @@ const HomePage = () => {
 
     return (
         <div className={classes.style}>
-            <p>HOLA</p>
+            <Navbar/>
             <button onClick={(e) => darkMode()} className={classes.button}>
                 Dark
             </button>
