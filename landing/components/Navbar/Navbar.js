@@ -26,13 +26,17 @@ const Navbar = () => {
     }
   }));
 
-  const classes = useStyles();
+  const theme = useStyles();
 
   return (
-    <div className={classes.style}>
-      <h1>Lleva tu negocio al próximo nivel.</h1>
-      <p>Lorem ipsum dolor sit amet, id nec enim autem oblique, ei dico mentitum duo.
-        Illum iusto laoreet his te. Lorem partiendo mel ex. Ad vitae admodum voluptatum per.</p>
+    <div className={theme.style}>
+      <div className={styles.topnav}>
+        <a href="#news">Nosotros</a>
+        <a href="#contact">Productos</a>
+        <a href="#about">Servicios</a>
+        <a href="#about">Portafolio</a>
+        <a href="#about">Contacto</a>
+      </div>
     </div>
   )
 }

@@ -30,12 +30,12 @@ const HomePage = () => {
     return (
         <div className={classes.style}>
             <Navbar/>
-            <button onClick={(e) => darkMode()} className={classes.button}>
+            {/* <button onClick={(e) => darkMode()} className={classes.button}>
                 Dark
             </button>
             <button onClick={(e) => lightMode()} className={classes.button}>
                 Light
-            </button>
+            </button> */}
         </div>
     )
 }
