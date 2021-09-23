@@ -1,13 +1,10 @@
 import React from 'react';
-import HomePage from './home';
-import ThemeState from "../context/Theme/ThemeState";
+import Application from "./_app";
 
 const Index = () => {
     return (
         <React.StrictMode>
-            <ThemeState>
-                <HomePage/>
-            </ThemeState>
+            <Application/>
         </React.StrictMode>
     );
 }

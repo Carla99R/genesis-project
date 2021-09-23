@@ -1,9 +1,9 @@
 export default (state, action) => {
-    const {style, button} = action;
+    const {mode, button} = action;
 
     return {
         ...state,
-        style: style,
+        mode: mode,
         button: button
     }
 

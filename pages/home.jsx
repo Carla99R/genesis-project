@@ -5,34 +5,31 @@ import {makeStyles} from '@material-ui/core/styles';
 const HomePage = () => {
 
     const {
-        style,
+        mode,
         button,
         darkMode,
         lightMode
     } = useContext(ThemeContext);
 
-    const useStyles = makeStyles((theme) => ({
-        style: {
-            background: style.background,
-            fontFamily: style.font,
-            color: style.text,
-        },
-        button: {
-            color: button.color,
-            background: button.bg
-        }
-    }));
-
-    const classes = useStyles();
-
-
     return (
-        <div className={classes.style}>
+        <div style={{
+            background: mode.background,
+            fontFamily: mode.font,
+            color: mode.text
+        }}>
             <p>HOLA</p>
-            <button onClick={(e) => darkMode()} className={classes.button}>
+            <button onClick={(e) => darkMode()}
+                    style={{
+                        color: button.color,
+                        background: button.bg
+                    }}>
                 Dark
             </button>
-            <button onClick={(e) => lightMode()} className={classes.button}>
+            <button onClick={(e) => lightMode()}
+                    style={{
+                        color: button.color,
+                        background: button.bg
+                    }}>
                 Light
             </button>
         </div>
